@@ -1,0 +1,54 @@
+[global_config]
+  dbus = False
+  focus = system
+  window_state = maximise
+  borderless = True
+  extra_styling = False
+  scroll_tabbar = True
+  homogeneous_tabbar = False
+  hide_from_taskbar = True
+  enabled_plugins = ,
+[keybindings]
+[profiles]
+  [[default]]
+    background_type = image
+    background_image = /home/john/Downloads/firefox/linuxwp.jpg
+    font = JetBrainsMono NF Bold 14
+    show_titlebar = False
+    scroll_on_keystroke = False
+    use_custom_command = True
+    custom_command = zsh
+    use_system_font = False
+    title_hide_sizetext = True
+  [[zsh]]
+    background_type = image
+    background_image = /home/john/Downloads/firefox/linuxwp.jpg
+    foreground_color = "#ffffff"
+[layouts]
+  [[default]]
+    [[[window0]]]
+      type = Window
+      parent = ""
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+  [[SaveLastSessionLayout]]
+    [[[child0]]]
+      type = Window
+      parent = ""
+      order = 0
+      position = 0:0
+      maximised = True
+      fullscreen = False
+      size = 117, 65
+      title = john@fedora:~/.config/terminator
+      last_active_term = 4ada75d7-d8f1-430d-a9fd-a9e689054596
+      last_active_window = True
+    [[[terminal1]]]
+      type = Terminal
+      parent = child0
+      order = 0
+      profile = zsh
+      uuid = 4ada75d7-d8f1-430d-a9fd-a9e689054596
+      directory = /home/john/.config/terminator
+[plugins]

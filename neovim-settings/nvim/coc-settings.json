@@ -1,0 +1,7 @@
+{
+	"colors.enable": true,
+	"codeLens.enable": true,
+	"sumneko-lua.enableNvimLuaDev": true,
+	"coc.preferences.formatOnSave": true,
+	"stylua.styluaPath": "/usr/bin/stylua"
+}

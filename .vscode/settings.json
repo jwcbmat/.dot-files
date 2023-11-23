@@ -1,0 +1,169 @@
+{
+  // editor font
+  "editor.fontFamily": "'JetBrainsMono Nerd Font', monospace",
+  "editor.fontLigatures": true,
+  "editor.lineHeight": 1.608,
+  "terminal.integrated.lineHeight": 1.2,
+ 
+  // theme settings
+  "workbench.colorTheme": "Tokyo Night",
+  "monokaiPro.fileIconsMonochrome": true,
+
+  // renders blocks instead of charaters for a cleaner look,
+  // since such small characters are unreadable anyway.
+  "editor.minimap.renderCharacters": false,
+  "editor.minimap.autohide": true,
+  // allows tokenization to happen asynchronously,
+  //freeing some resources when open very large files.
+  "editor.experimental.asyncTokenization": true,
+  // edit opening and closing html tags (and some other symbols) together
+  "editor.linkedEditing": true,
+  // fold import headers by default
+  "editor.foldingImportsByDefault": true,
+  "explorer.fileNesting.enabled": true,
+  "explorer.excludeGitIgnore": true,
+  "editor.suggest.localityBonus": true,
+  "editor.lineNumbers": "relative",
+
+  // enables smooth animations in a few different places
+  "editor.smoothScrolling": true,
+  "workbench.list.smoothScrolling": true,
+  "editor.cursorSmoothCaretAnimation": "on",
+
+  // no welcome page, opens the project readme instead
+  "workbench.startupEditor": "readme",
+
+  // respect files permissions and encoding
+  "files.autoGuessEncoding": true,
+  "files.readonlyFromPermissions": true,
+  // save whenever the editor focus changes
+  "files.autoSave": "onFocusChange",
+  "search.useIgnoreFiles": false,
+
+  // improve the diff editor by using more advanced features and by
+  // automatically collapsing unchanged regions.
+  "diffEditor.diffAlgorithm": "advanced",
+  "diffEditor.experimental.useVersion2": true,
+
+  // replaces dialogs and the title bar with vscode's custom ones for better
+  // looking windows in linux, instead of the native window decorations.
+  "window.dialogStyle": "custom",
+  "window.titleBarStyle": "custom",
+
+  // use keycode for keyboard dispatch logic.
+  // this allows better key remapping.
+  "keyboard.dispatch": "keyCode",
+
+  // ruler at the 80th column. this is useful for
+  // quickly finding out how long our lines are.
+  "editor.rulers": [80],
+
+  // allow committing and pushing without confirm
+  "git.enableSmartCommit": true,
+  "git.confirmSync": false,
+  "git.autofetchPeriod": 180, // auto git fetch
+
+  // formatters for differente file types
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[shellscript]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "[toml]": {
+    "editor.defaultFormatter": "tamasfe.even-better-toml"
+  },
+  "[xml]": {
+    "editor.defaultFormatter": "redhat.vscode-xml"
+  },
+  "[prisma]": {
+    "editor.defaultFormatter": "Prisma.prisma"
+  },
+
+  // deal with javascript imports in more standardized ways. absolute
+  // imports usually don't work well in javascript projects. also, don't
+  // include the file extension for javascript files (.js/.ts) and always
+  // use the index implicitely.
+  "javascript.preferences.importModuleSpecifier": "non-relative",
+  "javascript.preferences.importModuleSpecifierEnding": "minimal",
+  "typescript.preferences.importModuleSpecifier": "non-relative",
+  "typescript.preferences.importModuleSpecifierEnding": "minimal",
+
+  // show code lenses and inlay types for additional information on many
+  // javascript symbols and typescript types.
+  "javascript.referencesCodeLens.enabled": true,
+  "javascript.referencesCodeLens.showOnAllFunctions": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "typescript.implementationsCodeLens.enabled": true,
+  "typescript.inlayHints.enumMemberValues.enabled": true,
+  "typescript.inlayHints.functionLikeReturnTypes.enabled": true,
+  "typescript.inlayHints.parameterNames.enabled": "literals",
+  "typescript.inlayHints.parameterTypes.enabled": true,
+  "typescript.inlayHints.propertyDeclarationTypes.enabled": true,
+  "typescript.inlayHints.variableTypes.enabled": true,
+  "typescript.referencesCodeLens.enabled": true,
+  "typescript.referencesCodeLens.showOnAllFunctions": true,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+
+  // terminal profiles
+  "terminal.integrated.profiles.linux": {
+    "zsh (login)": {
+      "path": "zsh",
+      "args": ["-l"]
+    }
+  },
+  "terminal.integrated.defaultProfile.linux": "zsh (login)",
+  // login shells doesnt work with this/
+  "terminal.integrated.shellIntegration.enabled": false,
+
+  // jira (atlassian)
+  "atlascode.bitbucket.enabled": false, // disables bitbucket
+  "atlascode.jira.jqlList": [
+    {
+      "id": "a42edbef-48fb-4a68-9bf3-617d94767e2e",
+      "enabled": true,
+      "name": "My integramedsaude Issues",
+      "query": "assignee = currentUser() AND resolution = Unresolved ORDER BY lastViewed DESC",
+      "siteId": "9ebe7121-f06e-4021-b7e0-22b7a73210a4",
+      "monitor": true
+    }
+  ],
+
+  // additional yaml schemas and tags. this is modified automatically by the
+  // atlassian extension.
+  "yaml.schemas": {
+    "file:///home/gabriel/.vscode-oss/extensions/atlassian.atlascode-3.0.7/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
+  },
+  "yaml.customTags": [
+    "!And",
+    "!And sequence",
+    "!If",
+    "!If sequence",
+    "!Not",
+    "!Not sequence",
+    "!Equals",
+    "!Equals sequence",
+    "!Or",
+    "!Or sequence",
+    "!FindInMap",
+    "!FindInMap sequence",
+    "!Base64",
+    "!Join",
+    "!Join sequence",
+    "!Cidr",
+    "!Ref",
+    "!Sub",
+    "!Sub sequence",
+    "!GetAtt",
+    "!GetAZs",
+    "!ImportValue",
+    "!ImportValue sequence",
+    "!Select",
+    "!Select sequence",
+    "!Split",
+    "!Split sequence"
+  ],
+
+  // disable data collection
+  "aws.telemetry": false,
+  "redhat.telemetry.enabled": false,
+  "workbench.iconTheme": "eq-material-theme-icons-darker"
+}
